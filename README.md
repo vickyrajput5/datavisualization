@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📊 Data Visualization App with Next.js 15
 
-## Getting Started
+This project is a full-featured data visualization application built with Next.js 15. It connects to a FastAPI backend, fetches data, and provides a rich interface for filtering, sorting, visualizing, and submitting data.
 
-First, run the development server:
+🚀 Features
 
+✅ Backend Integration
+- Connects to the provided FastAPI backend.
+- Fetches data from the `/data/tips` endpoint.
+
+ 📥 Data Fetching
+- Loading spinner while data is being fetched.
+- Displays error messages on failure.
+
+ 📊 Data Display
+- Responsive HTML table with all dataset columns.
+- Adapts to different screen sizes.
+
+ 📈 Visualizations (using Chart.js)
+- **Scatter Plot**: Total bill vs. tip.
+- **Bar Chart**: Average tip per day of the week.
+
+ 🔍 Filtering
+Filters update both the table and the charts in real-time:
+- By Sex (Male / Female)
+- By Smoker (Yes / No)
+- By Day of Week
+- By Time (Lunch / Dinner)
+- By Total Bill, Tip Amount, and Party Size (Range Sliders)
+
+🔃 Sorting
+- Click on any column header to sort.
+- Toggle ascending/descending order.
+- Sort indicators included.
+
+ 📤 Send Filtered Data
+- “Submit Filtered Data” button sends current filter and sort state to the backend.
+- Displays success or error messages based on API response.
+
+ 💅 User Interface
+- Built with **Tailwind CSS**.
+- Clean, modern, and fully responsive design.
+- Mobile-friendly layout and intuitive controls.
+
+🛠️ Tech Stack
+
+- Frontend: Next.js 15, React, Tailwind CSS
+- Charts: Chart.js
+- Backend: FastAPI (external)
+
+ 📦 Getting Started
+
+ 1. Clone the repo
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/vickyrajput5/datavisualization.git
+cd datavisualization
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ 2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ 3. Run the development server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ 4. Make sure the backend is running
+Ensure your FastAPI backend is up and accessible at the expected endpoint.
